@@ -6,7 +6,6 @@
     "start": "node node_modules/react-native/local-cli/cli.js start",
     "lint": "eslint components",
     "pretty": "prettier --semi false --print-width 100 --single-quote --trailing-comma all --write \"components/**/*.js\"",
-    "precommit": "lint-staged && yarn test",
     "flow": "flow",
     "flow-stop": "flow stop",
     "test:unit": "jest",
