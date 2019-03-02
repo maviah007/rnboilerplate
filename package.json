@@ -1,0 +1,62 @@
+{
+  "name": "rnboilerplate",
+  "version": "0.0.1",
+  "private": true,
+  "scripts": {
+    "start": "node node_modules/react-native/local-cli/cli.js start",
+    "lint": "eslint components",
+    "pretty": "prettier --semi false --print-width 100 --single-quote --trailing-comma all --write \"components/**/*.js\"",
+    "precommit": "lint-staged && yarn test",
+    "flow": "flow",
+    "flow-stop": "flow stop",
+    "test:unit": "jest",
+    "test": "yarn lint && yarn flow && jest"
+  },
+  "lint-staged": {
+    "*.js": [
+      "yarn pretty",
+      "git add"
+    ]
+  },
+  "dependencies": {
+    "appcenter": "1.12.2",
+    "appcenter-analytics": "1.12.2",
+    "appcenter-crashes": "1.12.2",
+    "react": "16.3.1",
+    "react-native": "0.55.3"
+  },
+  "devDependencies": {
+    "babel-eslint": "^8.2.3",
+    "babel-jest": "22.4.3",
+    "babel-preset-flow": "^6.23.0",
+    "babel-preset-react-native": "4.0.0",
+    "enzyme": "^3.3.0",
+    "enzyme-adapter-react-16": "^1.1.1",
+    "enzyme-to-json": "^3.3.3",
+    "eslint": "^4.19.1",
+    "eslint-config-airbnb": "^16.1.0",
+    "eslint-plugin-flowtype": "^2.46.3",
+    "eslint-plugin-import": "^2.11.0",
+    "eslint-plugin-jsx-a11y": "^6.0.3",
+    "eslint-plugin-react": "^7.7.0",
+    "flow-bin": "^0.67.1",
+    "husky": "^0.14.3",
+    "jest": "22.4.3",
+    "lint-staged": "^7.0.5",
+    "prettier": "^1.12.1",
+    "react-dom": "^16.3.2",
+    "react-test-renderer": "16.3.1"
+  },
+  "jest": {
+    "preset": "react-native",
+    "testMatch": [
+      "**/?(*.)test.js?(x)"
+    ],
+    "snapshotSerializers": [
+      "enzyme-to-json/serializer"
+    ],
+    "setupFiles": [
+      "<rootDir>/jest/setup.js"
+    ]
+  }
+}
