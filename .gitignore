@@ -110,6 +110,7 @@ DerivedData/
 *.perspectivev3
 !default.perspectivev3
 xcuserdata/
+components/__snapshots__
 
 # IOS
 ios/Pods/
