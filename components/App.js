@@ -1,23 +1,27 @@
 // @flow
 
 import React, { Component } from 'react';
-import { StyleSheet, View } from 'react-native';
+import { StyleSheet, View, Text } from 'react-native';
 
 const styles = StyleSheet.create({
   container: {
     flex: 1,
     justifyContent: 'center',
     alignItems: 'center',
-    backgroundColor: '#F5FCFF',
+    backgroundColor: 'green',
+  },
+  text: {
+    fontSize: 30,
+    fontWeight: 'bold',
   },
 });
 
 type Props = {
-  receiver: string
+  receiver: string,
 };
 
 type State = {
-  value: number
+  value: number,
 };
 
 export default class App extends Component<Props, State> {
@@ -30,8 +34,10 @@ export default class App extends Component<Props, State> {
   render() {
     return (
       <View style={styles.container}>
-        {this.props.receiver}
-        {this.state.value}
+        <Text style={styles.text}>
+          {this.props.receiver}
+          {this.state.value}
+        </Text>
       </View>
     );
   }

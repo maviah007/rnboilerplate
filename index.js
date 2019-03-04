@@ -1,4 +1,4 @@
-import { AppRegistry } from 'react-native'
-import App from './components/App'
+import { AppRegistry } from 'react-native';
+import App from './components/App';
 
-AppRegistry.registerComponent('RNBoilerPlate', () => App)
+AppRegistry.registerComponent('RNBoilerPlate', () => App);
