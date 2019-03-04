@@ -5,8 +5,8 @@ import App from './App';
 describe('Testing App component', () => {
   it('renders as expected', () => {
     const wrapper = shallow(<App receiver="Hi" />);
-    expect(wrapper).toMatchSnapshot({ updateSnapshot: false });
+    expect(wrapper).toMatchSnapshot();
     wrapper.setProps({ receiver: 'Bye' });
-    expect(wrapper).toMatchSnapshot({ updateSnapshot: false });
+    expect(wrapper).toMatchSnapshot();
   });
 });
